@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
+//crud operation lli hene create, read,update, delete
 
+//Read
 router.get('/tasks', (req, res)=>{
     return res.status(200).json({
         taskID: 1,
@@ -8,6 +10,7 @@ router.get('/tasks', (req, res)=>{
     });
 });
 
+//Create
 router.post('/tasks', (req,res)=>{
     const body = req.body;
     return res.status(200).json({
@@ -15,6 +18,7 @@ router.post('/tasks', (req,res)=>{
     });
 });
 
+//Update
 router.put('tasks',(req,res)=>{
     const body = req.body;
     return res.status(200).json({
@@ -22,6 +26,7 @@ router.put('tasks',(req,res)=>{
     });
 });
 
+//Delete
 router.delete('tasks',(req,res)=>{
     const body = req.body;
     return res.status(200).json({
